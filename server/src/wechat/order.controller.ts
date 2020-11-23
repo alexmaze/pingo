@@ -249,7 +249,7 @@ export class OrderController {
       return
     }
 
-    data.select_mode = "float"
+    // data.select_mode = "float"
     try {
       await this.productServ.create(id, data)
     } catch (err) {
@@ -277,6 +277,7 @@ export class OrderController {
       return
     }
 
+    data.id = productId
     try {
       await this.productServ.update(data)
     } catch (err) {

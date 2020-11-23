@@ -37,7 +37,6 @@ export class ProductService {
   async update(data: ProductEntity) {
     try {
       const p = await this.repo.findOne(data.id)
-
       if (!p) {
         throw new NotFoundException()
       }

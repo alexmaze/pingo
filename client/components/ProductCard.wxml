@@ -26,7 +26,7 @@
   <view class="members" wx:if="{{data.members && data.members.length > 0}}">
     <view class="sep"></view>
     <view class="infos">
-      <view class="member" wx:for="{{data.members}}" wx:key="index">
+      <view class="member" wx:for="{{data.members}}" wx:key="index" data-index="{{ index }}" catchtap="handleShowMember">
         <image class="member-avatar"  src="{{item.account.avatar_url}}"></image>
         <view class="number">
           *{{item.buy_number}}

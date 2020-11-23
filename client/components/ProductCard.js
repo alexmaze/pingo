@@ -18,6 +18,14 @@ Component({
   },
 
   methods: {
+    handleShowMember: function(e) {
+      const m = this.properties.data.members[e.currentTarget.dataset.index]
+      wx.showModal({
+        title: m.account.name || `微信用户${m.account.wx_open_id}`,
+        content: `买了 ${m.buy_number} 件，共计 ${m.buy_number * this.properties.data.unit_price} 元`,
+        showCancel: false
+      })
+    }
   },
 
   observers: {

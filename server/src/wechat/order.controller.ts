@@ -57,7 +57,7 @@ export class OrderController {
       const total = await this.productMemberServ.sumNumberByOrderId(o.id)
       res.push({
         ...o,
-        total
+        total: parseFloat(total.toFixed(4))
       })
     }
 
@@ -249,6 +249,7 @@ export class OrderController {
       return
     }
 
+    data.select_mode = "float"
     try {
       await this.productServ.create(id, data)
     } catch (err) {

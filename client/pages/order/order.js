@@ -55,7 +55,7 @@ Page({
           total += m.buy_number * p.unit_price
         }
       }
-      order.total = total
+      order.total = parseFloat(total.toFixed(4))
 
       this.setData({
         order,

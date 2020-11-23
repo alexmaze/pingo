@@ -96,5 +96,5 @@
 .members .total {
   font-size: 24rpx;
   color: #3e4685AA;
-  margin: 12rpx 0;
+  margin: 24rpx 0 12rpx 0;
 }
